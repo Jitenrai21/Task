@@ -1,0 +1,34 @@
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+
+# Pydantic v2
+pydantic==2.7.4
+pydantic-settings==2.3.4
+
+# Database (async PostgreSQL)
+sqlalchemy==2.0.31
+alembic==1.13.2
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+
+# Redis (async)
+redis==5.0.7
+
+# Vector store
+qdrant-client==1.10.0
+
+# Local embeddings (free)
+sentence-transformers==3.0.1
+
+# Groq (LLM chat — OpenAI-compatible client)
+groq==0.9.0
+
+# File parsing
+pymupdf==1.24.5
+python-multipart==0.0.9
+
+# Utilities
+python-dotenv==1.0.1
+httpx==0.27.0
+tenacity==8.3.0
