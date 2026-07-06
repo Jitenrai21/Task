@@ -1,3 +1,37 @@
+# Secrets / env
 .env
+.env.*
+
+# Local docs/work notes
 /documentations
+
+# Virtual env
 venv/
+.venv/
+
+# Python cache / artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Alembic generated versions (optional)
+alembic/versions/*.py
