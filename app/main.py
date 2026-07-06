@@ -59,6 +59,10 @@ app.add_exception_handler(EmbeddingError, embedding_error_handler)
 app.include_router(router)
 
 
+@app.get("/", tags=["health"])
+async def root() -> dict[str, str]:
+    return {"message": "service is running"}
+
 # Health check 
 @app.get("/health", tags=["health"])
 async def health_check() -> dict[str, str]:

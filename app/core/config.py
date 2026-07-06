@@ -29,10 +29,8 @@ class Settings(BaseSettings):
     QDRANT_API_KEY: str | None = None
     QDRANT_COLLECTION_NAME: str = "documents"
 
-    # Embeddings provider 
-    EMBEDDING_PROVIDER: str = "sentence_transformers"  # sentence_transformers | openai
-
-    # Local embeddings (free)
+    # Embeddings (local, free — sentence-transformers only)
+    EMBEDDING_PROVIDER: str = "sentence_transformers"
     LOCAL_EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
 
     # Groq (LLM chat)

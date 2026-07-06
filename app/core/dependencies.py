@@ -5,6 +5,8 @@ from qdrant_client import AsyncQdrantClient
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import AsyncSessionLocal
+from groq import AsyncGroq
+
 from app.services.embedding_service import EmbeddingService
 from app.services.embedding_service import get_embedding_service as _get_embedding_service
 from app.services.redis_service import get_redis_client
@@ -33,5 +35,11 @@ def get_redis() -> aioredis.Redis:
 
 
 def get_embedding_service() -> EmbeddingService:
-    """Returns the singleton EmbeddingService (provider resolved from settings)."""
+    """Returns the singleton EmbeddingService (sentence-transformers, local)."""
     return _get_embedding_service()
+
+
+def get_llm_client() -> AsyncGroq:
+    """Returns the singleton Groq async client."""
+    from app.services.llm_service import get_groq_client
+    return get_groq_client()
